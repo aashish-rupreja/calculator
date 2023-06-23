@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div id="calculator-body">
       <div id="display"></div>
       <div id="keys">
         <div id="operation-keys">
-          <button id="+">+</button>
-          <button id="-">-</button>
-          <button id="*">*</button>
-          <button id="/">/</button>
-          <button id="=">=</button>
+          <button id="+" class="operation">+</button>
+          <button id="-" class="operation">-</button>
+          <button id="*" class="operation">*</button>
+          <button id="/" class="operation">/</button>
+          <button id="=" class="operation">=</button>
         </div>
-        <div id="number-keys">
-          <button id="1">1</button><button id="2">2</button>
-          <button id="3">3</button><button id="4">4</button>
-          <button id="5">5</button><button id="6">6</button>
-          <button id="7">7</button><button id="8">8</button>
-          <button id="9">9</button><button id="clear">clear</button>
-          <button id="0">0</button><button id="decimal">.</button>
+        <div id="num-clear-and-delete-key-container">
+          <div id="number-keys">
+            <button id="one">1</button><button id="two">2</button>
+            <button id="three">3</button><button id="four">4</button>
+            <button id="five">5</button><button id="six">6</button>
+            <button id="seven">7</button><button id="eight">8</button>
+            <button id="nine">9</button><button id="zero">0</button>
+            <button id="decimal">.</button>
+          </div>
+          <div id="clear-and-delete-keys">
+            <button id="clear">clr</button><button id="del">del</button>
+          </div>
         </div>
       </div>
     </div>
