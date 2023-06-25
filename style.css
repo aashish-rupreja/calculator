@@ -1,17 +1,10 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/*************************** Styles ****************************/
 #calculator-body {
   background-color: darkgray;
-  display: flex;
-  flex-direction: column;
   border: 10px solid rgb(70, 70, 70);
   border-radius: 10px;
-  width: 600px;
-  height: 750px;
+  width: 400px;
+  height: fit-content;
 }
 
 #display {
@@ -20,44 +13,83 @@ body {
   border: 5px solid rgb(70, 70, 70);
   border-radius: 10px;
   color: rgb(50, 50, 50);
-  height: 150px;
+  min-height: 150px;
+  height: fit-content;
   font-size: 90px;
+}
+
+#expression {
+  font-size: 60px;
+  height: fit-content;
+  overflow-wrap: break-word;
+}
+
+#answer {
+  font-size: 80px;
 }
 
 button {
   background-color: gray;
   border: 5px solid rgb(70, 70, 70);
   border-radius: 10px;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
-  text-align: center;
-  width: 100px;
-  height: 100px;
+  height: 70px;
   margin: 5px;
 }
+
+#number-keys button {
+  width: 90px;
+}
+
+#number-keys #zero {
+  width: 190px;
+}
+
+#clear-and-delete-keys button {
+  width: 80px;
+  font-size: 30px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(110, 110, 110);
+}
+/*************************** Styles ****************************/
+
+/*************************** Flex ****************************/
+body {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  display: flex;
+  flex: 1 1 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #expression,
+#answer {
+  display: flex;
+} */
 
 #keys {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-#num-clear-and-delete-key-container {
-  display: flex;
-}
-
-#number-keys {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-#number-keys button {
-  width: 150px;
-}
-
-#number-keys #zero {
-  width: 300px;
 }
 
 #operation-keys {
@@ -68,12 +100,17 @@ button {
 #clear-and-delete-keys {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
-#clear-and-delete-keys button {
-  height: 210px;
+#number-keys {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-button:hover {
-  background-color: rgb(110, 110, 110);
+#num-clear-and-delete-key-container {
+  display: flex;
 }
+/*************************** Flex ****************************/
